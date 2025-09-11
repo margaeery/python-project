@@ -1,0 +1,22 @@
+name: Python Checks
+
+on: [push, pull_request]
+
+jobs:
+  basic-checks:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Python syntax check
+      run: |
+        python -m py_compile *.py
+        echo "Syntax is correct"
+        
+    - name: Check for syntax errors
+      run: |
+        for file in *.py; do
+          python -m ast "$file"
+        done
