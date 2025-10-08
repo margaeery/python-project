@@ -3,6 +3,7 @@ def gcd(a, b):
         a, b = b, a % b
     return abs(a)
 
+
 try:
     num1 = int(input("Введите первое число: "))
     num2 = int(input("Введите второе число: "))
