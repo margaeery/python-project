@@ -1,10 +1,12 @@
 import tkinter as tk
 from tkinter import filedialog
 
+
 def select_file():
     file_path = filedialog.askopenfilename()
     if file_path:
         label.config(text=f"Выбран: {file_path}")
+
 
 root = tk.Tk()
 root.title("Выбор файла")

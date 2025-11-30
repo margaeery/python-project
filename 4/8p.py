@@ -3,7 +3,7 @@ import csv
 with open('1.csv', 'r', encoding='utf-8') as file:
     data = list(csv.DictReader(file))
 
-data_with_int_age =  list(map(lambda x: {
+data_with_int_age = list(map(lambda x: {
     'Имя': x['Имя'],
     'Возраст': int(x['Возраст']),
     'Должность': x['Должность']

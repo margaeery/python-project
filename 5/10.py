@@ -1,13 +1,17 @@
 import os
 import sys
-
-os.environ["QT_QPA_PLATFORM_PLUGIN_PATH"] = r"C:\Users\Маргарита\AppData\Local\Programs\Python\Python313\Lib\site-packages\PyQt5\Qt5\plugins"
-
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QVBoxLayout
+from PyQt5.QtWidgets import (
+    QApplication, QWidget, QLabel, QPushButton, QVBoxLayout)
 from PyQt5.QtCore import Qt
+
+os.environ["QT_QPA_PLATFORM_PLUGIN_PATH"] = (
+    r"C:\Users\Маргарита\AppData\Local\Programs"
+    r"\Python\Python313\Lib\site-packages\PyQt5\Qt5\plugins")
+
 
 def on_button_click():
     label.setText("Кнопка нажата!")
+
 
 app = QApplication([])
 

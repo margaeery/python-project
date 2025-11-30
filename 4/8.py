@@ -1,5 +1,6 @@
 import time
 
+
 def timer(func):
     def wrapper(*args, **kwargs):
         start = time.time()
@@ -9,17 +10,19 @@ def timer(func):
         return result
     return wrapper
 
+
 @timer
 def test_func1():
     summ = 0
-    for i in range(1,1001):
+    for i in range(1, 1001):
         summ += i
     return summ
+
 
 @timer
 def test_func2(n):
     summ = 0
-    for i in range(1,n):
+    for i in range(1, n):
         summ += 1000000*i
     return summ
 
