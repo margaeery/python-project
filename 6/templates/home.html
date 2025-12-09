@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD SQLite</title>
+</head>
+<body>
+    <h1>CRUD с SQLite</h1>
+    
+    <div>
+        <h3>Добавить запись:</h3>
+        <form action="/add" method="POST">
+            <input name="name" placeholder="Название" required>
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
+
+    <div>
+        <h3>Обновить запись:</h3>
+        <form action="/update" method="POST">
+            <input name="id" placeholder="ID" type="number" required>
+            <input name="name" placeholder="Новое название" required>
+            <button type="submit">Обновить</button>
+        </form>
+    </div>
+
+    <div>
+        <h3>Удалить запись:</h3>
+        <form action="/delete" method="POST">
+            <input name="id" placeholder="ID" type="number" required>
+            <button type="submit">Удалить</button>
+        </form>
+    </div>
+
+    <br><br>
+    <div>
+        <a href="/items">Посмотреть все записи</a>
+    </div>
+</body>
+</html>
